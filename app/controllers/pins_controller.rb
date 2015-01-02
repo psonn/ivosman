@@ -4,7 +4,7 @@ class PinsController < ApplicationController
   before_action :correct_user, only: [:edit, :update, :destroy]
 
   def index
-    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 4)
+    @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
   end
   
   def show
@@ -52,6 +52,6 @@ class PinsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pin_params
-      params.require(:pin).permit(:description, :image, :title)
+      params.require(:pin).permit(:description, :image, :title, :summary)
     end
 end

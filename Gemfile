@@ -19,6 +19,8 @@ gem 'aws-sdk'
 gem 'masonry-rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'ckeditor'
+gem 'non-stupid-digest-assets'
 
 group :development, :test do
      gem 'sqlite3'

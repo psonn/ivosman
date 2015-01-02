@@ -6,13 +6,11 @@
     <div class="panel panel-default">
     	<div class="panel-heading">
             <h2><%= @pin.title %></h2>
-        </div>
-      <div class="panel-heading center">
-        <%= image_tag @pin.image.url(:medium) %>
       </div>
       <div class="panel-body">
-        <p><%= @pin.description %></p>
-        <p><strong><%= @pin.user.username if @pin.user %></strong></p>
+        <div class="center"><p><%= image_tag @pin.image.url(:medium) %></p></div><br/>
+        <p>Geplaatst door <strong><%= @pin.user.username if @pin.user %></strong> op <%= @pin.created_at.strftime("%d/%m/%Y") %> om <%= @pin.created_at.strftime("%H:%M") %></p>
+        <div class="center"><p><%= (@pin.description).html_safe %></p></div>
 
         <% if current_user && @pin.user == current_user %>
          <%= link_to edit_pin_path(@pin) do %>
