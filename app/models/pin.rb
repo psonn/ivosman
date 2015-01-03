@@ -8,4 +8,5 @@ class Pin < ActiveRecord::Base
     validates :title, presence: true
     validates :summary, presence: true
 
+    acts_as_taggable
 end
