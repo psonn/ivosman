@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   resources :pins
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   devise_for :users
   root "pins#index"
   get "about" => "pages#about"
