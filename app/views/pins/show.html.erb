@@ -1,5 +1,4 @@
 <% provide(:title, @pin.title) %>
-<%= link_to 'Back', pins_path %>
 
 <div class="row">
   <div class="col-md-offset-2 col-md-8">
@@ -15,10 +14,10 @@
         <% if current_user && @pin.user == current_user %>
          <%= link_to edit_pin_path(@pin) do %>
            <span class="glyphicon glyphicon-edit"></span>
-             Edit
+             Edit | 
           <% end %>
         <% end %>
-
+        <%= link_to 'Back', pins_path %>
       </div>
     </div>
   </div>
