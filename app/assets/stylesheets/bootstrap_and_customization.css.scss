@@ -35,7 +35,13 @@ body {
   padding-left: 0px;
 }
 
-.hidden { display: none; }
+.hidden { 
+	display: none; 
+}
+
+.panel-body {
+	margin: 15px;
+}
 
 /*flash*/
 

@@ -27,7 +27,8 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :image %>
+    <%= f.label :image %><br>
+    <%= image_tag @pin.image.url(:medium) if @pin.image? %><br>
     <%= f.file_field :image, class: "form-control" %>
   </div>
 
@@ -40,7 +41,7 @@
     <%= f.label :description %>
     <%= f.cktext_area :description, class: "form-control", :ckeditor => {:language => 'nl'} %>
   </div>
-  
+
   <div class="form-group">
     <%= f.button "Save pin", class: "btn btn-primary", data: {disable_with: "<i class='fa fa-spinner fa-spin'></i> Saving pin..."} %>
   </div>

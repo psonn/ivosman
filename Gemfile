@@ -20,6 +20,8 @@ gem 'masonry-rails'
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'ckeditor'
+gem 'mail_form'
+gem 'simple_form'
 
 group :development, :test do
      gem 'sqlite3'
