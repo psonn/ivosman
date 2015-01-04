@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700");
 
 $body-bg:                    #ecf0f1;
 $font-family-sans-serif:     'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -12,9 +12,13 @@ $jumbotron-bg:               white;
 @import "bootstrap";
 
 body {
-	background: url('ineke.jpg');
+	background: url('ineke.jpg') top center fixed;
 	background-repeat: no-repeat;
 	background-size: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .center {
@@ -112,10 +116,4 @@ footer ul li {
     a {
     	color: #fff;
     }
-}
-
-/* Search box */
-
-#searchbox {
-	margin-top: 0.5em;
 }
