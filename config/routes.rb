@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :pins
+  resources :pins do
+    collection do
+      post :import
+      get :autocomplete
+    end
+  end
 
   mount Ckeditor::Engine => '/ckeditor'
 

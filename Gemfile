@@ -21,8 +21,8 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'ckeditor'
 gem 'mail_form'
-gem 'simple_form'
 gem 'acts-as-taggable-on'
+gem 'searchkick'
 
 group :development, :test do
      gem 'sqlite3'
