@@ -47,18 +47,6 @@
         <% else %>
           <li><%= link_to "Sign in", new_user_session_path %></li>
         <% end %>
-        <li>
-          <div id="searchbox">
-            <%= form_tag pins_path, class: "form-inline", method: :get do %>
-              <div class="input-group">
-                  <%= text_field_tag :query, params[:query], class: "form-control", id: "pin_search", autocomplete: "off", placeholder: "Search" %>
-                  <div class="input-group-btn">
-                    <%= submit_tag "Search", class: "btn btn-primary" %>
-                  </div>
-              </div>
-            <% end %>
-          </div>
-        </li>
     </ul>
   </div><!-- /.navbar-collapse -->
   </div><!-- /.container --> 

@@ -9,5 +9,4 @@ class Pin < ActiveRecord::Base
     validates :summary, presence: true
 
     acts_as_taggable
-    searchkick autocomplete: ['title']
 end

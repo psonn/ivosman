@@ -2,14 +2,6 @@ class PinsController < ApplicationController
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
-
-  def index
-    if params[:query].present? 
-      @pins = Pin.search(params[:query]).paginate(page: params[:page], per_page: 8)
-    else
-      @pins = Pin.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 8)
-    end  
-  end
   
   def index
     if params[:tag].present? 
@@ -51,9 +43,6 @@ class PinsController < ApplicationController
     redirect_to pins_url
   end
 
-  def autocomplete
-    render json: Pin.search(params[:query], autocomplete: true, limit: 10).map(&:title)
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
